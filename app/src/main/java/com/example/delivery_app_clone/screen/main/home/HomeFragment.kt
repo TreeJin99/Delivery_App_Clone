@@ -1,6 +1,5 @@
 package com.example.delivery_app_clone.screen.main.home
 
-import android.nfc.Tag
 import com.example.delivery_app_clone.databinding.FragmentHomeBinding
 import com.example.delivery_app_clone.screen.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
