@@ -9,8 +9,5 @@ interface ResourcesProvider {
 
     fun getString(@StringRes resId: Int, vararg formArgs : Any): String
 
-    fun getColor(@ColorRes resId: Int) : Int
-
     fun getColorStateList(@ColorRes resId: Int) : ColorStateList
-
 }

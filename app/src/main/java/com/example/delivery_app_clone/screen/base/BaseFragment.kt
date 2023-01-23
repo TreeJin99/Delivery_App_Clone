@@ -10,7 +10,7 @@ import kotlinx.coroutines.Job
 
 abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     abstract val viewModel: VM
-    private lateinit var binding: VB
+    lateinit var binding: VB
     abstract fun getViewBinding(): VB
     private lateinit var fetchJob: Job
 

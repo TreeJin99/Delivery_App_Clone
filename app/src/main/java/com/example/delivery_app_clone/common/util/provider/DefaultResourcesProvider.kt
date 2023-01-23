@@ -1,19 +1,17 @@
 package com.example.delivery_app_clone.common.util.provider
 
 import android.content.Context
-import android.content.res.ColorStateList
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
-import androidx.core.content.ContextCompat
 
 class DefaultResourcesProvider(
-    private val context: Context
+    val context: Context
 ) : ResourcesProvider {
+
     override fun getString(@StringRes resId: Int): String = context.getString(resId)
 
-    override fun getString(@StringRes resId: Int, vararg formArgs: Any): String = context.getString(resId, formArgs)
+    override fun getString(@StringRes resId: Int, vararg formatArgs: Any): String = context.getString(resId, formatArgs)
 
-    override fun getColor(@ColorRes resId: Int): Int = ContextCompat.getColor(context, resId)
+    override fun getColorStateList(@ColorRes resId: Int) = context.getColorStateList(resId)
 
-    override fun getColorStateList(@ColorRes resId: Int): ColorStateList = context.getColorStateList(resId)
 }
