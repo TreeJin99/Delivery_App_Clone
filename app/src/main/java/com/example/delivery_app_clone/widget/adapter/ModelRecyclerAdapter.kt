@@ -3,7 +3,7 @@ package com.example.delivery_app_clone.widget.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.delivery_app_clone.common.util.mapper.ModelViewHolderMapper
-import com.example.delivery_app_clone.common.util.provider.ResourceProvider
+import com.example.delivery_app_clone.common.util.provider.ResourcesProvider
 import com.example.delivery_app_clone.model.CellType
 import com.example.delivery_app_clone.model.Model
 import com.example.delivery_app_clone.screen.base.BaseViewModel
@@ -13,7 +13,7 @@ import com.example.delivery_app_clone.widget.adapter.viewholder.ModelViewHolder
 class ModelRecyclerAdapter<M : Model, VM : BaseViewModel>(
     private var modelList: List<Model>,
     private val viewModel: VM,
-    private val resourceProvider: ResourceProvider,
+    private val resourceProvider: ResourcesProvider,
     private val adapterListener: AdapterListener
 ) : ListAdapter<Model, ModelViewHolder<M>>(Model.DIFF_CALLBACK) {
 

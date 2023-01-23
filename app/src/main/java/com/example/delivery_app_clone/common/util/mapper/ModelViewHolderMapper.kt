@@ -2,7 +2,7 @@ package com.example.delivery_app_clone.common.util.mapper
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.delivery_app_clone.common.util.provider.ResourceProvider
+import com.example.delivery_app_clone.common.util.provider.ResourcesProvider
 import com.example.delivery_app_clone.databinding.ViewholderEmptyBinding
 import com.example.delivery_app_clone.model.CellType
 import com.example.delivery_app_clone.model.Model
@@ -17,7 +17,7 @@ object ModelViewHolderMapper {
         parent: ViewGroup,
         type: CellType,
         viewModel: BaseViewModel,
-        resourcesProvider: ResourceProvider
+        resourcesProvider: ResourcesProvider
     ): ModelViewHolder<M> {
         val inflater = LayoutInflater.from(parent.context)
 

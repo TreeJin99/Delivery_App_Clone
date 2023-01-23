@@ -25,8 +25,8 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     }
 
     open fun initState() {
-        arguments?.let { bundle ->
-            viewModel.storeState(bundle)
+        arguments?.let { it ->
+            viewModel.storeState(it)
         }
         initViews()
         fetchJob = viewModel.fetchData()
@@ -38,10 +38,10 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     abstract fun observeData()
 
     override fun onDestroy() {
+        super.onDestroy()
         if (fetchJob.isActive) {
             fetchJob.cancel()
         }
-        super.onDestroy()
     }
 
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Delivery_App_Clone</string>
+    <string name="home">홈</string>
+    <string name="myprofile">My Profile</string>
 </resources>
